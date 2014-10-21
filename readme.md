@@ -11,16 +11,17 @@ The purpose of these files is to help you hit the ground running and start devel
 So whether you're new to Java or an experienced software dev, let our example project give you a running start on integrating with Benchmark Email.
 Good luck! 
 
-##Pre Requisites
+##Prerequisites
 In order to be able to run this example project you must have the following:
 
-- Java JDK with at least Java v1.8. You can download the JDK here:
+- Java v1.8 which comes included with JDK8 (Java Development Kit). You can download the JDK8 here:
 http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 
-- An Eclipse IDE that is compatible with Java v1.8. You can download the Eclipse IDE here: 
+- An Eclipse IDE that is compatible with Java v1.8. The Luna or Mars package will work just fine, Kepler and older packages<br>
+  would not be compatible. You can download the Eclipse IDE here: <br> 
 https://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/lunasr1
 
-- A Benchmark Email account to connect to. Don't have one? Head on over to our Sign Up page to set up a free account. 
+- No money, our free and paid plans allow you to use our API at no cost. So follow the link and sign up for a free account to receive your API token:<br>
 https://ui.benchmarkemail.com/Register
 
 ##Setting Up Your Environment for Java 
@@ -35,36 +36,41 @@ http://docs.oracle.com/javase/tutorial/essential/environment/paths.html
  
  ![javaVersion](http://content.screencast.com/users/bigrp03/folders/Snagit/media/726afb28-6dda-470b-980b-98e1046cd57f/10.10.2014-12.19.png "Java -version")
  
-#Configuring Eclipse for this Project 
+#Configuring the Project for Eclipse 
 
-In order to setup Eclipse to run the program follow these steps: <br>
+In order to setup thisproject on Eclipse follow these steps: <br>
 
-- Download files at INSERT LINK TO GITHUB REPOSITORY HERE <br>
-- Store in a folder of your preference (possibly in your desktop for easy access)<br>
+- Download the repository<br>
+	- Go to https://github.com/Benchmark-Email/bmejavawrapper
+	- Click on the "Download ZIP" button located on the right hand side 
+- Once the download is finished, extract the zip file (possibly to your desktop for easy access)<br>
 - Open Eclipse <br>
 - Select a separate (empty) folder as your workspace<br>
 - Click on File -> Import... <br>
-- Under the General folder select "Existing Projects into Workspace", then hit Next <br>
-- Make sure that the "Select root directory" option is ticked on the top and click on Browse...<br>
-- Navigate to the folder where you stored the example project and click OK<br>
-- The "javaWrapper" project should appear in the "Projects" section. Make sure javaWrapper is selected<br>
-- Under Options make sure to tick the "Copy projects into Workspace" option<br> 
-- Hit Finish <br>
+	- Under the General folder select "Existing Projects into Workspace", then hit Next <br>
+	- (1) Make sure that the "Select root directory" option is ticked on the top and click on Browse...<br>
+	- Navigate to where you extracted the zip file and highlight the "javaWrapper" folder. Click OK<br>
+	- (2) The "javaWrapper" project should appear in the "Projects" section. Make sure javaWrapper is selected<br>
+	- (3) Under Options make sure to tick the "Copy projects into Workspace" option<br> 
+	- Hit Finish <br>
+![importProject](http://content.screencast.com/users/bmeScreens/folders/Snagit/media/d7a4e199-6f4c-4a4e-b9de-7b9aa6b051e2/2014-10-21_14-17-46.png"importProject")
 
-Your Package Explorer should look like this:<br>
+Your Package Explorer should look like this (we will take care of the errors in the next section):<br>
 
 ![package-Libs](http://content.screencast.com/users/bigrp03/folders/Snagit/media/716ad428-856c-4afa-90e8-592c2b126e58/10.17.2014-15.22.png"packageWithoutLibs")
 
+
 <br>
-Now the files are imported but we still need to add the xml libraries (hence the errors).<br>
-These are included in the lib folder, so let's import them. <br>
+##Importing XML-RPC Libraries
+Now the project is imported but we still need to add the xml-rpc libraries (hence the errors).<br>
+Never worked with xml-rpc before? No sweat, the files are in the "lib" folder. We just need to import them. <br>
 
 - In Eclipse <br>
 	- Click on Project -> Properties <br>
 	- Click on "Java Build Path" (will be on the left hand side) <br>
 	- Click the "Libraries" tab <br>
 	- Click on "Add External JARs..." <br>
-	- Navigate to the lib folder included in the files. If you moved this folder anywhere, navigate to where you moved it <br>
+	- Navigate to your Workspace folder. Then go to /javaWrapper/lib <br>
 	- Highlight all 4 JARs then click the Open button<br>
 	<OL>
  <LI>commons-httpclient-3.1<br>
@@ -73,23 +79,24 @@ These are included in the lib folder, so let's import them. <br>
  <LI>xmlrpc-common-3.1<br>
  </OL>
 	- Click OK <br>
-	- Eclipse should show the added libraries under "Referenced Libraries" <br>
+	- Eclipse should show the added libraries under "Referenced Libraries" and all the errors should be gone <br>
 	![packageExplorer](http://content.screencast.com/users/bigrp03/folders/Snagit/media/3ac88408-9647-4b9b-aa64-2dfb338fe479/10.17.2014-14.00.png "Package Explorer")
 <br>
-- The final step is to restart Eclipse so click on File -> Restart<br>
+- If you still have an error restart Eclipse by clicking on File -> Restart<br><br> 
 Congratulations! You have successfully installed and configured the Benchmark Email Java wrapper! 
 
 #Running the Project
 
-Now that we have everything set up we have one last thing to cover before we can run our program.<br>
+Before we can run the program we need to add our Benchmark Email username and password.<br>
 Double click on the "MainBME.java" file under the javaWrapper package in the Package Explorer. <br>
 <br>Let's take a look at lines 11 and 12:
 
 ![usernamePassword](http://content.screencast.com/users/bigrp03/folders/Snagit/media/d520646e-9ec3-400b-b804-31401a61ea99/10.17.2014-15.29.png "userNamePassword")
 
-<br>In order to successfully connect to a Benchmark Email account you must write in your username and password in the variables 'userName' and 'password'.
-These variables will be passed along in the login() method to allow you to login to your Benchmark Email account. 
-Once you have added in your username and password just hit the Run button. That's all there is to it!  
+<br>In order to successfully connect to a Benchmark Email account you must write in your username and password in the variables 'userName' and 'password'.<br>
+<br>The login() method will attempt to login to your Benchmark Email account and set the API token to the 'token' variable. <br> 
+Once you have added in your username and password just hit the Run button (1) and click OK (2) . That's all there is to it! 
+![runningProject](http://content.screencast.com/users/bmeScreens/folders/Snagit/media/1871faf5-8bd0-4a58-b8c2-7711d86823a9/2014-10-21_14-44-33.png"Running Project") 
 
 
 #Contact Info 
