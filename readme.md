@@ -77,7 +77,7 @@ These are included in the lib folder, so let's import them. <br>
 	![packageExplorer](http://content.screencast.com/users/bigrp03/folders/Snagit/media/3ac88408-9647-4b9b-aa64-2dfb338fe479/10.17.2014-14.00.png "Package Explorer")
 <br>
 - The final step is to restart Eclipse so click on File -> Restart<br>
-####Congratulations! You have successfully installed and configured the Benchmark Email Java wrapper! 
+Congratulations! You have successfully installed and configured the Benchmark Email Java wrapper! 
 
 #Running the Project
 
