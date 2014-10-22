@@ -53,11 +53,11 @@ In order to setup thisproject on Eclipse follow these steps: <br>
 	- (2) The "javaWrapper" project should appear in the "Projects" section. Make sure javaWrapper is selected<br>
 	- (3) Under Options make sure to tick the "Copy projects into Workspace" option<br> 
 	- Hit Finish <br>
-![importProject](http://content.screencast.com/users/bmeScreens/folders/Snagit/media/d7a4e199-6f4c-4a4e-b9de-7b9aa6b051e2/2014-10-21_14-17-46.png"importProject")
+![importProject](http://content.screencast.com/users/bmeScreens/folders/Snagit/media/d7a4e199-6f4c-4a4e-b9de-7b9aa6b051e2/2014-10-21_14-17-46.png "importProject")
 
 Your Package Explorer should look like this (we will take care of the errors in the next section):<br>
 
-![package-Libs](http://content.screencast.com/users/bigrp03/folders/Snagit/media/716ad428-856c-4afa-90e8-592c2b126e58/10.17.2014-15.22.png"packageWithoutLibs")
+![packageLibs](http://content.screencast.com/users/bigrp03/folders/Snagit/media/716ad428-856c-4afa-90e8-592c2b126e58/10.17.2014-15.22.png "packageWithoutLibs")
 
 
 <br>
@@ -96,7 +96,7 @@ Double click on the "MainBME.java" file under the javaWrapper package in the Pac
 <br>In order to successfully connect to a Benchmark Email account you must write in your username and password in the variables 'userName' and 'password'.<br>
 <br>The login() method will attempt to login to your Benchmark Email account and set the API token to the 'token' variable. <br> 
 Once you have added in your username and password just hit the Run button (1) and click OK (2) . That's all there is to it! 
-![runningProject](http://content.screencast.com/users/bmeScreens/folders/Snagit/media/1871faf5-8bd0-4a58-b8c2-7711d86823a9/2014-10-21_14-44-33.png"Running Project") 
+![runningProject](http://content.screencast.com/users/bmeScreens/folders/Snagit/media/1871faf5-8bd0-4a58-b8c2-7711d86823a9/2014-10-21_14-44-33.png "Running Project") 
 
 
 #Contact Info 
